@@ -1,19 +1,11 @@
 <!DOCTYPE html>
-<!--
--구상한 것(공식 가이드라인의 내용)
-ipify 를 통해 ip 인식 혹은 수동 입력
-Cloudflare DoH 로 A, SRV레코드 받아오기
-도메인 IP와 사용자 IP가 일치하는지 확인
-일치한다 -> IP 유출 위험
-불일치 -> 유출 가능성 낮음
--->
 <html>
     <head>
         <script src="main.js"></script>
         <link rel="stylesheet" href="main.css" />
         <meta charset="utf-8">
     </head>
-    <body>
+    <body onload="getParams()">
         <div id="container"> <!-- Grid -->
             <div id="form"> <!-- 입력란 -->
                 <div> <!-- 서버주소 입력란 -->
@@ -29,11 +21,28 @@ Cloudflare DoH 로 A, SRV레코드 받아오기
                 <!-- IP주소 입력란 -->
                 <div>
                     <h3>서버 IP주소</h3>
-                    <input type="text" id="ip" placeholder="IP주소 입력">
-                    <button type="button" onclick="getIPaddr()">자동감지</button> 
+                    <!---->
+                    <div id="ip-input">
+                        <input type="text" id="ip" placeholder="IP주소 입력">
+                        <button type="button" onclick="getIPaddr()">내 IP</button>
+                    </div>
                 </div>
                 <button type="button" onclick="check()">검사하기</button>
-                <table>
+                <div>
+                    <div >
+                        <h3 class="head">A 레코드</h3>
+                        <p id="A">-</p>
+                    </div>
+                    <div >
+                        <h3 class="head">SRV 레코드</h3>
+                        <p id="SRV">-</p>
+                    </div>
+                    <div >
+                        <h3 class="head">SRV레코드의 목적지 주소</h3>
+                        <p id="MCV">-</p>
+                    </div>
+                </div>
+                <!-- <table>
                     <tr>
                         <td>A레코드</td>
                         <td id="A">-</td>
@@ -43,13 +52,10 @@ Cloudflare DoH 로 A, SRV레코드 받아오기
                         <td id="SRV">-</td>
                     </tr>
                     <tr>
-                        <td>SRV레코드에 연결된 A레코드</td>
+                        <td>SRV레코드의 목적지 주소</td>
                         <td id="MCV">-</td>
                     </tr>
-                </table>
-            </div>
-            <div id="progress"> <!-- 추후 만들 진행도 -->
-
+                </table> -->
             </div>
         </div>
         <footer></footer>
