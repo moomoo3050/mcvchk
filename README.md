@@ -2,7 +2,7 @@
 ## 개요
 mcv.kr공식 [가이드라인](https://cafe.naver.com/mcvkr/136)에 따른 IP유출 여부를 확인하는 간단한 도구 입니다.  
 **이 프로젝트는 현재 제작 중입니다**  
-🟦🟦🟦🟦🟦🟦🟦🟦🟦⬛ **90%** <br>
+🟦🟦🟦🟦🟦🟦🟦🟦🟦⬛ **90%**  
 현재 UI 작업 및 기타 버그/편의성 수정이 남아있습니다.
 ## 로드맵
 - [ ] UI 개편
@@ -26,5 +26,5 @@ mcv.kr공식 [가이드라인](https://cafe.naver.com/mcvkr/136)에 따른 IP유
 https://www.ipify.org/  
 IP 주소 수집 지원 
 ### Cloudflare DoH(DNS over HTTPS)
-https://www.cloudflare.com/ko-kr/learning/dns/dns-over-tls/ (소개 문서)  
+https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/make-api-requests/  
 DNS Query 지원
